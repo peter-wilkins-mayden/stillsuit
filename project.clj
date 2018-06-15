@@ -13,18 +13,15 @@
                  [fipp "0.6.12"]
                  [funcool/cuerdas "2.0.5"]
                  [io.aviso/pretty "0.1.34"]
-                 [com.walmartlabs/lacinia "0.25.0"]
-                 [com.datomic/datomic-pro "0.9.5656" :scope "provided"]
+                 [com.walmartlabs/lacinia "0.27.0"]
+                 [com.datomic/datomic-pro "0.9.5697" :scope "provided"]
                  [clojure.java-time "0.3.1"]
                  [org.clojure/tools.logging "0.4.0"]
                  [org.clojure/tools.reader "1.2.2"]]
 
   :plugins [[s3-wagon-private "1.3.1" :exclusions [commons-logging]]]
 
-  :repositories [["workframe-private"
-                  {:url           "s3p://deployment.workframe.com/maven/releases/"
-                   :no-auth       true
-                   :sign-releases false}]]
+  :repositories {"local" "file:~/.m2/"}
 
   :source-paths ["src"]
 
@@ -46,7 +43,7 @@
                                       [io.forward/yaml "1.0.7"]
                                       [org.apache.logging.log4j/log4j-core "2.10.0"]
                                       [org.apache.logging.log4j/log4j-slf4j-impl "2.10.0"]
-                                      [com.datomic/datomic-pro "0.9.5656"
+                                      [com.datomic/datomic-pro "0.9.5697"
                                        :exclusions [org.slf4j/slf4j-nop]]]}
              :docs    {:plugins      [[lein-codox "0.10.3"]
                                       [lein-asciidoctor "0.1.15" :exclusions [org.slf4j/slf4j-api]]]
